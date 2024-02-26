@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.hfad.assignment2.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_playBoard"
+            app:destination="@id/playBoard" />
+    </fragment>
+    <fragment
+        android:id="@+id/playBoard"
+        android:name="com.hfad.assignment2.PlayBoard"
+        android:label="fragment_play_board"
+        tools:layout="@layout/fragment_play_board" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+</navigation>
